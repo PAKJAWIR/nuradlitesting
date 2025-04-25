@@ -1,17 +1,12 @@
 import { Button1, Button2 } from "./button";
 import SideQuotes from "./sidequotes";
-import nuradli from "../assets/img/nuradli.jpg";
 
 function Header() {
   return (
     <header>
       <div className="relative h-full pt-20">
-
         {/* Background Gambar (Mobile) */}
-        <div
-          className="absolute inset-0 bg-top bg-no-repeat bg-cover lg:hidden"
-          style={{ backgroundImage: `url(${nuradli})` }}
-        ></div>
+        <div className="absolute inset-0 bg-top bg-no-repeat bg-cover lg:hidden" style={{ backgroundImage: "url('/img/Nuradli.jpg')" }}></div>
 
         {/* Background Gradient (Desktop) */}
         <div className="absolute inset-0 hidden lg:block bg-gradient-to-t from-warna5 to-warna6"></div>
@@ -66,7 +61,7 @@ function Header() {
                 need money for <span className="text-warna4">porsche</span>
               </h3>
               <div className="h-fit overflow-hidden rounded-md hidden lg:block">
-                <img src={nuradli} alt="Nuradli" className="w-full h-full object-cover rounded-xl" />
+                <img src="/img/Nuradli.jpg" alt="Nuradli" className="w-full h-full object-cover rounded-xl" />
               </div>
             </div>
           </div>
