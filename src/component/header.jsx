@@ -1,12 +1,25 @@
-import {  Button1, Button2 } from "./button";
+import { Button1, Button2 } from "./button";
 import SideQuotes from "./sidequotes";
+import nuradli from "../assets/img/nuradli.jpg";
 
 function Header() {
   return (
     <header>
-      <div className="relative h-full pt-20 bg-[url('/src/assets/img/nuradli.jpg')] bg-top bg-no-repeat bg-cover lg:bg-gradient-to-t from-warna5 to-warna6">
-        {/* Glassmorph */}
+      <div className="relative h-full pt-20">
+
+        {/* Background Gambar (Mobile) */}
+        <div
+          className="absolute inset-0 bg-top bg-no-repeat bg-cover lg:hidden"
+          style={{ backgroundImage: `url(${nuradli})` }}
+        ></div>
+
+        {/* Background Gradient (Desktop) */}
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-t from-warna5 to-warna6"></div>
+
+        {/* Glassmorph Overlay (Mobile) */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#14263066] to-[#5485B0] backdrop-blur-xs lg:hidden z-0 mix-blend-darken transition-all duration-300" />
+
+        {/* Konten */}
         <div className="relative z-10 flex flex-col lg:flex-row sm:p-10 gap-10 items-center justify-center p-10 lg:gap-25 h-full w-full">
           {/* Column Kiri */}
           <div className="w-fit lg:max-w-lg">
@@ -53,7 +66,7 @@ function Header() {
                 need money for <span className="text-warna4">porsche</span>
               </h3>
               <div className="h-fit overflow-hidden rounded-md hidden lg:block">
-                <img src="/src/assets/img/nuradli.jpg" alt="Nuradli" className="w-full h-full object-cover rounded-xl" />
+                <img src={nuradli} alt="Nuradli" className="w-full h-full object-cover rounded-xl" />
               </div>
             </div>
           </div>
