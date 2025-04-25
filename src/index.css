@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Inconsolata", monospace, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: #0c181f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  box-sizing: inherit;
+}
