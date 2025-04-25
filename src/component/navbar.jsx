@@ -18,7 +18,7 @@ function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className={`relative top-0 left-0 w-full z-50 flex items-center p-4 justify-between lg:justify-around bg-transparent transition-all duration-300`}>
+    <nav className={`fixed lg:relative top-0 left-0 w-full z-50 flex items-center p-4 justify-between lg:justify-around bg-warna6 lg:bg-transparent transition-all duration-300`}>
       <Link to="/">
         <h1 className="text-warna2 font-bold text-2xl">NurAdli.</h1>
       </Link>
