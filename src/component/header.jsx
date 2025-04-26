@@ -7,9 +7,9 @@ function Header() {
       <div className="relative h-full pt-20">
         {/* Background Gambar (Mobile) */}
         <div className="absolute inset-0 bg-top bg-no-repeat bg-cover lg:hidden" style={{ backgroundImage: "url('/img/Nuradli.jpg')" }}></div>
-
+    
         {/* Background Gradient (Desktop) */}
-        <div className="absolute inset-0 hidden lg:block bg-gradient-to-t from-warna5 to-warna6"></div>
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-t from-transparent via-warna6 to-warna5"></div>
 
         {/* Glassmorph Overlay (Mobile) */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#14263066] to-[#5485B0] backdrop-blur-xs lg:hidden z-0 mix-blend-darken transition-all duration-300" />
