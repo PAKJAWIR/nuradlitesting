@@ -1,9 +1,9 @@
+import { Title1 } from "./title";
+
 function AboutMe() {
   return (
     <div className="text-justify flex flex-col gap-3">
-      <h3 className="text-warna1 text-xl font-bold">
-        <span className="text-warna4">*</span>about-me
-      </h3>
+      <Title1 text="about-me" />
       <p className="text-warna3">Sup, my name is Nuradli</p>
       <p className="text-warna3">
         I'm a Front-End Developer and Graphic Designer who brings ideas to life through beautiful code and captivating visuals. I specialize in crafting responsive, user-friendly interfaces that merge design and functionality seamlessly.

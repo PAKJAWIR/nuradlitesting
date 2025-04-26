@@ -1,6 +1,7 @@
 import Marquee from "react-fast-marquee";
 import { FaReact, FaBootstrap, FaHtml5, FaCss3Alt, FaNodeJs, FaSass, FaFigma } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript, SiSvelte } from "react-icons/si";
+import { Title1 } from "./title";
 
 function TechStack() {
   const tech = [
@@ -18,9 +19,7 @@ function TechStack() {
 
   return (
     <div className="text-justify flex flex-col gap-5">
-      <h3 className="text-warna1 text-xl font-bold">
-        <span className="text-warna4">*</span>tech-stack
-      </h3>
+      <Title1 text="tech-stack" />
       <Marquee speed={25} direction="left" pauseOnHover>
         <div className="flex flex-row text-3xl mr-5 ml-5 gap-10 text-warna4 overflow-hidden lg:overflow-hidden">
           {tech.map((item, idx) => (
