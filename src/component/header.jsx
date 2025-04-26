@@ -7,15 +7,12 @@ function Header() {
       <div className="relative h-full pt-20">
         {/* Background Gambar (Mobile) */}
         <div className="absolute inset-0 bg-top bg-no-repeat bg-cover lg:hidden" style={{ backgroundImage: "url('/img/Nuradli.jpg')" }}></div>
-    
         {/* Background Gradient (Desktop) */}
         <div className="absolute inset-0 hidden lg:block bg-gradient-to-t from-transparent via-warna6 to-warna5"></div>
-
         {/* Glassmorph Overlay (Mobile) */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#14263066] to-[#5485B0] backdrop-blur-xs lg:hidden z-0 mix-blend-darken transition-all duration-300" />
-
         {/* Konten */}
-        <div className="relative z-10 flex flex-col lg:flex-row sm:p-10 gap-10 items-center justify-center p-10 lg:gap-25 h-full w-full">
+        <div className="relative z-10 flex flex-col lg:flex-row md:flex-row md sm:p-10 gap-10 items-center justify-center p-10 lg:gap-25 h-full w-full">
           {/* Column Kiri */}
           <div className="w-fit lg:max-w-lg">
             <div className="p-5 lg:p-5">
