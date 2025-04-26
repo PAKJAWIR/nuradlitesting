@@ -16,9 +16,9 @@ function App() {
           <Route key={route.path} path={route.path} element={route.element} />
         ))}
       </Routes>
+      
       <main></main>
       <footer></footer>
-      <RunningText />
     </div>
   );
 }

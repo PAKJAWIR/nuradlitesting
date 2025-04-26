@@ -6,7 +6,7 @@ import TechStack from "./techstack";
 
 function Main() {
   return (
-    <main id="aboutme" className="w-full pt-20 bg-warna6">
+    <main id="aboutme" className="w-full bg-warna6">
       {/* AboutMe Column */}
       <div className=" flex flex-col lg:flex-row items-start justify-center p-5 sm:p-10 gap-5 lg:gap-25 w-full">
         {/* Column Kiri */}

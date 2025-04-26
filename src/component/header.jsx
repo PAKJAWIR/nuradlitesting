@@ -1,4 +1,5 @@
 import { Button1, Button2 } from "./button";
+import RunningText from "./runningtext";
 import SideQuotes from "./sidequotes";
 
 function Header() {
@@ -64,6 +65,8 @@ function Header() {
           </div>
         </div>
       </div>
+      <RunningText />
+      <div id="last-header-section" className="w-full bg-transparent"></div>
     </header>
   );
 }
