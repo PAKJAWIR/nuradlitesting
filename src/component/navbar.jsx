@@ -24,10 +24,14 @@ function Navbar() {
         <ul className="hidden lg:flex items-center gap-8">
           {AppRouting.map((item) => (
             <li key={item.path}>
-              <NavLink to={item.path} className={({ isActive }) => `relative px-3 py-2 transition-colors ${isActive ? "text-warna4 font-semibold" : "text-warna2 hover:text-warna4"}`}>
-                <span className="text-warna4 mr-1.5">*</span>
-                {item.name}
-                <span className="absolute left-3 right-3 bottom-0 h-px bg-warna4 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
+              <NavLink to={item.path} className={({ isActive }) => `relative group px-3 py-2 transition-colors duration-300 ${isActive ? "text-warna4 font-semibold" : "text-warna2 hover:text-warna4"}`}>
+                {({ isActive }) => (
+                  <>
+                    <span className="text-warna4 mr-1.5">*</span>
+                    {item.name}
+                    <span className={`absolute left-3 right-3 bottom-0 h-[2px] bg-warna4 origin-left transition-transform duration-300 ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`} />
+                  </>
+                )}
               </NavLink>
             </li>
           ))}

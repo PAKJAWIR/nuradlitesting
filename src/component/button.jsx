@@ -7,7 +7,7 @@ const iconClass = "text-sm md:text-xl";
 export function Button1() {
   const buttonClass =
     "flex items-center gap-2 bg-warna1 hover:bg-warna2 text-warna5 rounded-md transition-all duration-300 transform hover:scale-105 " +
-    "text-sm px-5 py-2 sm:text-base sm:px-4 sm:py-1.5 md:text-lg md:px-5 md:py-2 lg:text-xl lg:px-9 lg:py-2.5";
+    "text-sm px-5 py-2 sm:text-base sm:px-4 sm:py-1.5 md:text-lg md:px-10 md:py-2 lg:text-xl lg:px-9 lg:py-2.5";
 
   return (
     <div className="flex gap-2 sm:gap-3 md:gap-4 mt-2">
