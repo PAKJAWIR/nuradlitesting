@@ -28,7 +28,7 @@ export function Button1() {
 
 export function Button2({ text, to, href, onClick, className = "" }) {
   const baseClass =
-    "whitespace-nowrap w-fit text-xs sm:text-sm md:text-base lg:text-lg px-5 py-2 md:px-6 lg:px-9  lg:py-2 mt-2 text-warna1 rounded-md border border-solid border-warna4  transition-all duration-300 transform hover:scale-105 " + className;
+    "whitespace-nowrap w-fit text-xs sm:text-sm md:text-base lg:text-lg px-5 py-2 md:px-6 lg:px-9  lg:py-2 mt-2 text-warna1 rounded-md border border-solid border-warna4  transition-all duration-300 transform hover:bg-warna4 hover:text-warna1 hover:scale-105 " + className;
 
   if (to) {
     return (
@@ -55,7 +55,7 @@ export function Button2({ text, to, href, onClick, className = "" }) {
 
 export function BackToTopButton() {
   return (
-    <a href="#" className="fixed  bottom-4 right-4 p-3 rounded-full bg-warna4 text-warna1 shadow-md hover:bg-warna1 hover:text-warna4 transition-colors duration-300" aria-label="Back to top">
+    <a href="#" className="fixed z-100 bottom-4 right-4 p-3 rounded-full border border-solid border-warna4 text-warna4 shadow-md hover:bg-warna4 hover:text-warna1 hover:scale-105 transition-colors duration-300" aria-label="Back to top">
       <FaArrowUp className={iconClass} />
     </a>
   );

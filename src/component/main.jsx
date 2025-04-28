@@ -1,6 +1,7 @@
 import AboutMe from "./aboutme";
 import { Button2 } from "./button";
 import Certification from "./certification";
+import MyProjects from "./myprojects";
 import MyServices from "./myservices";
 import TechStack from "./techstack";
 
@@ -21,10 +22,13 @@ function Main() {
         </div>
       </div>
       {/* Certifications */}
-      <div className=" border-warna4 flex flex-col lg:flex-row items-start justify-center p-5 sm:p-10 gap-5 lg:gap-25 w-full">
-        <div className=" flex flex-col lg:flex-row items-start justify-center p-5 sm:p-10 gap-5 lg:gap-25 w-full">
-          <Certification />
-        </div>
+      <div className="border-warna4 flex flex-col items-start justify-center p-5 sm:p-10 gap-5 w-full">
+        <Certification />
+      </div>
+
+      {/* My Projects */}
+      <div className=" flex flex-col items-start justify-center p-1 lg:p-5 gap-5 mt-5 h-full">
+        <MyProjects />
       </div>
     </main>
   );

@@ -48,7 +48,7 @@ function Certification() {
       <Title1 text="certifications" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
         {certifications.map((cert) => (
-          <Tilt key={cert.id} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400}>
+<Tilt key={cert.id} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400} >          
             <div className={cardClass}>
               <a href={cert.href} target="_blank" rel="noopener noreferrer" className="relative block focus:outline-none">
                 <div className={imageWrapperClass}>

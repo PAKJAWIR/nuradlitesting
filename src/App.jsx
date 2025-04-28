@@ -11,13 +11,12 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
+      <BackToTop/>
       <Routes>
         {AppRouting.map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />
         ))}
       </Routes>
-      
-      <main></main>
       <footer></footer>
     </div>
   );
