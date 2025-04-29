@@ -1,12 +1,34 @@
-# React + Vite
+✨ Portfolio Website - Built with React + Tailwind CSS + Vite ⚡
+<div align="center"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" /> </div>
+🖥️ Overview
+This is a personal portfolio website built with React.js and Tailwind CSS, powered by Vite for lightning-fast development.
+It showcases my projects, skills, services, and provides a way to contact me.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Lightweight, modern, and fully responsive across all devices.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛠️ Built With
+⚛️ React — Frontend Library
 
-## Expanding the ESLint configuration
+🎨 Tailwind CSS — Utility-first CSS Framework
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚡ Vite — Build Tool and Development Server
+
+📂 Features
+Responsive design for mobile, tablet, and desktop
+
+Smooth scroll and animations
+
+Filterable project portfolio section
+
+Contact form integration
+
+SEO friendly
+
+Fast loading speed thanks to Vite
+
+🚀 Getting Started
+Prerequisites
+Node.js installed
+
+npm or yarn
