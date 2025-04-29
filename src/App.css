@@ -10,14 +10,33 @@
 }
 
 @keyframes glitch {
-  0% { transform: translate(0); }
-  20% { transform: translate(-1px, 1px); }
-  40% { transform: translate(1px, -1px); }
-  60% { transform: translate(-1px, 1px); }
-  80% { transform: translate(1px, -1px); }
-  100% { transform: translate(0); }
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 
 .animate-glitch {
   animation: glitch 0.1s infinite;
+}
+
+.custom-bullet {
+  @apply h-[2px] w-6 rounded-full bg-warna3 opacity-100 transition-all duration-300;
+}
+.custom-bullet-active {
+  @apply bg-warna4;
 }

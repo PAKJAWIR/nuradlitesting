@@ -1,9 +1,9 @@
-import Header from "../component/header";
+import UnderConstruction from "./UnderConstruction";
 
 function Projects() {
   return (
     <>
-      <Header />
+      <UnderConstruction />
     </>
   );
 }

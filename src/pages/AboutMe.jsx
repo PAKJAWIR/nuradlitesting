@@ -1,9 +1,10 @@
-import Header from "../component/header";
+import UnderConstruction from "./UnderConstruction";
+
 
 function AboutMe() {
   return (
-    <>
-      <Header />   
+    <> 
+<UnderConstruction/>
     </>
   );
 }

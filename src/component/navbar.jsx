@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useMenu } from "../context/UseMenu";
 import { useEffect } from "react";
-import AppRouting from "../config/AppRoutes";
+import { mainRoutes } from "../config/AppRoutes";
 
 function Navbar() {
   const { isMenuOpen, toggleMenu } = useMenu();
@@ -22,7 +22,7 @@ function Navbar() {
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex items-center gap-8">
-          {AppRouting.map((item) => (
+          {mainRoutes.map((item) => (
             <li key={item.path}>
               <NavLink to={item.path} className={({ isActive }) => `relative group px-3 py-2 transition-colors duration-300 ${isActive ? "text-warna4 font-semibold" : "text-warna2 hover:text-warna4"}`}>
                 {({ isActive }) => (
@@ -51,7 +51,7 @@ function Navbar() {
       <div className={`fixed inset-0 z-40 h-screen bg-warna6 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-4"}`}>
         <div className="h-full flex flex-col items-center justify-center">
           <ul className="space-y-8 text-justify">
-            {AppRouting.map((item) => (
+            {mainRoutes.map((item) => (
               <li key={item.path}>
                 <Link to={item.path} onClick={toggleMenu} className="inline-block text-2xl text-warna2 px-4 py-2 hover:text-warna4 transition-colors">
                   <span className="text-warna4 mr-2">*</span>
