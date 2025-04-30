@@ -4,9 +4,11 @@ import HoverDecryptText from "./decrypttext";
 import RunningText from "./runningtext";
 import SideQuotes from "./sidequotes";
 import { Title3 } from "./title";
-
+import { useCursor } from "../context/cursorContext";
+import Tilt from "react-parallax-tilt";
 
 function Header() {
+  const { textEnter, textLeave } = useCursor();
   return (
     <header>
       <div className="relative h-full pt-20">
@@ -29,10 +31,12 @@ function Header() {
           {/* Column Kiri */}
           <div className="w-fit md:max-w-lg">
             <div className="p-5 md:p-5">
-              <h1 className="text-warna2 text-lg md:text-3xl font-bold text-justify">
+              <h1 onMouseEnter={textEnter} onMouseLeave={textLeave} className="text-warna2 text-lg md:text-3xl font-bold text-justify">
                 My name is Nuradli, I am a <span className="text-warna4">Graphic Designer</span> and <span className="text-warna4">Front-End Developer</span>
               </h1>
-              <p className="text-warna3 text-xs md:text-sm font-medium mt-2">Love to craft good and simple things</p>
+              <p onMouseEnter={textEnter} onMouseLeave={textLeave} className="text-warna3 text-xs md:text-sm font-medium mt-2">
+                Love to craft good and simple things
+              </p>
 
               <div className="gap-2 md:gap-5 flex flex-row mt-5">
                 <Button2 text="About Me" href="#aboutme" />
@@ -52,12 +56,18 @@ function Header() {
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="w-fit md:max-w-lg md:h-fit hidden lg:block md:hidden">
             <div className="p-5 md:p-5 flex flex-col gap-2">
               <Title3 text="current-status" />
-              <h3 className="text-warna3 border border-solid border-warna4 p-5 text-center rounded-md text-2xl md:text-xl hover:bg-warna5/10 transition-colors">
-                <HoverDecryptText text="Need-money-for-Porsche" characters="0123456789$€¥£¢%&*" />
+              <h3
+                onMouseEnter={textEnter}
+                onMouseLeave={textLeave}
+                className="text-warna3 border border-solid border-warna4 p-5 text-center rounded-md text-2xl md:text-xl hover:scale-105 transition-all duration-300 ease-in-out hover:bg-warna5/10"
+              >
+                <HoverDecryptText className="cursor-none" text="Need-money-for-Porsche" characters="0123456789$€¥£¢%&*" />
               </h3>
-              <div className="h-fit overflow-hidden rounded-md hidden md:block">
-                <img src="/img/Nuradli.jpg" alt="Nuradli facing camera" className="w-full h-full md:w-full md:h-full object-cover rounded-xl" />
-              </div>
+              <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1} transitionSpeed={400}>
+                <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="h-fit overflow-hidden rounded-xl hidden md:block transition-all duration-300 ease-in-out  border border-solid border-warna4 hover:shadow-[0_0_20px_theme(colors.warna4)] hover:border-warna4">
+                  <img src="/img/Nuradli.jpg" alt="Nuradli facing camera" className="w-full h-full md:w-full md:h-full object-cover rounded-xl" />
+                </div>
+              </Tilt>
             </div>
           </motion.div>
         </motion.div>

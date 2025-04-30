@@ -1,3 +1,4 @@
+import { useCursor } from "../context/cursorContext";
 import { Title1, Title2 } from "./title";
 import Tilt from "react-parallax-tilt";
 
@@ -43,16 +44,18 @@ function Certification() {
     },
   ];
 
+  const { textEnter, textLeave } = useCursor();
+
   return (
     <div className="flex flex-col gap-3">
       <Title1 text="certifications" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+      <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
         {certifications.map((cert) => (
           <Tilt key={cert.id} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400}>
             <div className={cardClass}>
-              <a href={cert.href} target="_blank" rel="noopener noreferrer" className="relative block focus:outline-none">
+              <a href={cert.href} target="_blank" rel="noopener noreferrer" className="cursor-none relative block focus:outline-none">
                 <div className={imageWrapperClass}>
-                  <img src={cert.imgSrc} alt={`Certification-${cert.id}`} className="w-full h-full object-cover rounded-md transition-transform duration-300 group-hover:scale-105 group-focus-within:scale-105" />
+                  <img src={cert.imgSrc} alt={`Certification-${cert.id}`} className=" w-full h-full object-cover rounded-md transition-transform duration-300 group-hover:scale-105 group-focus-within:scale-105" />
 
                   {/* Hover effect overlay */}
                   <div className={hoverOverlayClass}>

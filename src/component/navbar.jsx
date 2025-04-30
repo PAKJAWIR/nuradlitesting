@@ -2,8 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 import { useMenu } from "../context/UseMenu";
 import { useEffect } from "react";
 import { mainRoutes } from "../config/AppRoutes";
+import { useCursor } from "../context/cursorContext";
 
 function Navbar() {
+  const { textEnter, textLeave } = useCursor();
   const { isMenuOpen, toggleMenu } = useMenu();
 
   useEffect(() => {
@@ -17,14 +19,16 @@ function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <Link to="/" className="z-50">
-          <h1 className="text-warna2 font-bold text-2xl">NurAdli.</h1>
+          <h1 onMouseEnter={textEnter} onMouseLeave={textLeave} className="text-warna2 font-bold text-2xl cursor-none">
+            NurAdli.
+          </h1>
         </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex items-center gap-8">
           {mainRoutes.map((item) => (
             <li key={item.path}>
-              <NavLink to={item.path} className={({ isActive }) => `relative group px-3 py-2 transition-colors duration-300 ${isActive ? "text-warna4 font-semibold" : "text-warna2 hover:text-warna4"}`}>
+              <NavLink to={item.path} onMouseEnter={textEnter} onMouseLeave={textLeave} className={({ isActive }) => `cursor-none relative group px-3 py-2 transition-colors duration-300 ${isActive ? "text-warna4 font-semibold" : "text-warna2 hover:text-warna4"}`}>
                 {({ isActive }) => (
                   <>
                     <span className="text-warna4 mr-1.5">*</span>
