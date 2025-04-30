@@ -25,11 +25,11 @@ function ContactMe() {
           </div>
           <div>
             <h3 onMouseEnter={textEnter} onMouseLeave={textLeave} className="font-semibold text-lg">Phone</h3>
-            <p onMouseEnter={textEnter} onMouseLeave={textLeave} className={classPara}>+62 123123</p>
+            <p onMouseEnter={textEnter} onMouseLeave={textLeave} className={classPara}>+62 82111776599</p>
           </div>
           <div>
             <h3 onMouseEnter={textEnter} onMouseLeave={textLeave} className="font-semibold text-lg">Email</h3>
-            <p onMouseEnter={textEnter} onMouseLeave={textLeave} className={classPara}>exam@gmail.com</p>
+            <p onMouseEnter={textEnter} onMouseLeave={textLeave} className={classPara}>muhammadnuradlialghifari@gmail.com</p>
           </div>
         </div>
       </div>
