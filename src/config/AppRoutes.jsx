@@ -1,6 +1,6 @@
 // config/AppRoutes.jsx
 import Home from "../pages/Home";
-import AboutMe from "../pages/AboutMe";
+import AboutMePage from "../pages/AboutMe";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
@@ -8,7 +8,7 @@ import NotFound from "../pages/NotFound";
 // Routing untuk navigasi utama
 export const mainRoutes = [
   { name: "Home", path: "/", element: <Home /> },
-  { name: "About Me", path: "/aboutme", element: <AboutMe /> },
+  { name: "About Me", path: "/aboutme", element: <AboutMePage /> },
   { name: "Projects", path: "/projects", element: <Projects /> },
   { name: "Contact", path: "/contact", element: <Contact /> },
 ];

@@ -1,12 +1,16 @@
-import UnderConstruction from "./UnderConstruction";
+import HeaderAboutMe from "../component/AboutMePageComponent/headerabout";
+import MainAboutMe from "../component/AboutMePageComponent/mainabout";
+import Footer from "../component/footer";
 
 
-function AboutMe() {
+function AboutMePage() {
   return (
-    <> 
-<UnderConstruction/>
+    <>
+      <HeaderAboutMe />
+      <MainAboutMe />
+      <Footer/>
     </>
   );
 }
 
-export default AboutMe;
+export default AboutMePage;

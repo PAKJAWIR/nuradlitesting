@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
-import { Button1, Button2 } from "./button";
-import HoverDecryptText from "./decrypttext";
-import RunningText from "./runningtext";
-import SideQuotes from "./sidequotes";
-import { Title3 } from "./title";
-import { useCursor } from "../context/cursorContext";
+import { Button1, Button2 } from "../button";
+import HoverDecryptText from "../decrypttext";
+import RunningText from "../runningtext";
+import SideQuotes from "../sidequotes";
+import { Title3 } from "../title";
 import Tilt from "react-parallax-tilt";
+import { useCursor } from "../../context/cursorContext";
 
 function Header() {
   const { textEnter, textLeave } = useCursor();
@@ -53,23 +53,28 @@ function Header() {
           </div>
 
           {/* Column Kanan */}
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="w-fit md:max-w-lg md:h-fit hidden lg:block md:hidden">
+          <div className="w-fit md:max-w-lg md:h-fit hidden lg:block md:hidden">
             <div className="p-5 md:p-5 flex flex-col gap-2">
               <Title3 text="current-status" />
               <h3
                 onMouseEnter={textEnter}
                 onMouseLeave={textLeave}
-                className="text-warna3 border border-solid border-warna4 p-5 text-center rounded-md text-2xl md:text-xl hover:scale-105 transition-all duration-300 ease-in-out hover:bg-warna5/10"
+                className="text-warna3 border border-solid border-warna4 p-5 text-center rounded-md text-2xl md:text-xl hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_theme(colors.warna4)] hover:border-warna4"
               >
                 <HoverDecryptText className="cursor-none" text="Need-money-for-Porsche" characters="0123456789$€¥£¢%&*" />
               </h3>
+
               <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1} transitionSpeed={400}>
-                <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="h-fit overflow-hidden rounded-xl hidden md:block transition-all duration-300 ease-in-out  border border-solid border-warna4 hover:shadow-[0_0_20px_theme(colors.warna4)] hover:border-warna4">
+                <div
+                  onMouseEnter={textEnter}
+                  onMouseLeave={textLeave}
+                  className="h-fit overflow-hidden rounded-xl hidden md:block transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_theme(colors.warna4)] hover:border-warna4"
+                >
                   <img src="/img/Nuradli.jpg" alt="Nuradli facing camera" className="w-full h-full md:w-full md:h-full object-cover rounded-xl" />
                 </div>
               </Tilt>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
 

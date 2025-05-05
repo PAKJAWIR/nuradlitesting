@@ -1,7 +1,10 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaArrowUp } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+
 import AppRouting, { GetRouteByName } from "../config/AppRoutes";
 import { useCursor } from "../context/cursorContext";
+import { motion, AnimatePresence } from "motion/react";
+import { useEffect, useState } from "react";
 
 const iconClass = "text-sm md:text-xl";
 
@@ -59,15 +62,35 @@ export function Button2({ text, to, href, onClick, className = "" }) {
 
 export function BackToTopButton() {
   const { textEnter, textLeave } = useCursor();
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <a
-      href="#"
-      aria-label="Back to top"
-      onMouseEnter={textEnter}
-      onMouseLeave={textLeave}
-      className="fixed z-100 bottom-4 right-4 p-3 rounded-full border border-solid border-warna4 text-warna4 shadow-md hover:bg-warna4 hover:text-warna1 hover:scale-105 transition-colors duration-300 cursor-none"
-    >
-      <FaArrowUp className={iconClass} />
-    </a>
+    <AnimatePresence>
+      {showButton && (
+        <motion.a
+          key="back-to-top"
+          href="#"
+          aria-label="Back to top"
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.2, ease: "easeOut",}}
+          className="fixed z-100 bottom-4 right-4 p-3 rounded-full border border-solid border-warna4 text-warna4 shadow-md hover:bg-warna4 hover:text-warna1 hover:scale-105 transition-all ease-in-out duration-300 cursor-none"
+        >
+          <FaArrowUp className="text-base md:text-lg" />
+        </motion.a>
+      )}
+    </AnimatePresence>
   );
 }

@@ -22,9 +22,9 @@ function TechStack() {
   const { textEnter, textLeave } = useCursor();
 
   return (
-    <div className="text-justify flex flex-col gap-5">
+    <div className="text-justify flex flex-col gap-5 w-full max-w-5xl">
       <Title1 text="tech-stack" />
-      <Marquee speed={25} direction="left" pauseOnHover>
+      <Marquee speed={25} direction="left" autoFill={true} pauseOnHover className="w-full overflow-hidden">
         <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="flex flex-row text-3xl mr-5 ml-5 gap-10 text-warna4 overflow-hidden">
           {tech.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center hover:text-warna1 transform hover:scale-105 transition-transform duration-300">
