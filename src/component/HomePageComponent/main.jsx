@@ -8,6 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { AboutMe } from "../aboutme";
 import { MyServices } from "../myservices";
+import { lazy } from "react";
 
 function Main() {
   useEffect(() => {
@@ -35,21 +36,15 @@ function Main() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center p-10 lg:p-5 gap-5 w-full">
+      <div className="flex flex-col items-center justify-center p-5 lg:p-5 gap-5 w-full" data-aos="fade-up">
         {/* Certifications */}
-        <div className="border-warna4 flex flex-col items-center justify-center md:px-1 p-10 lg:p-5 gap-5 w-full overflow-hidden" data-aos="fade-up">
+        <div className="border-warna4 flex flex-col items-center justify-center md:px-1 p-0 lg:p-5 gap-5 w-full overflow-hidden">
           <Certification />
         </div>
-
         {/* My Projects */}
-        <div className="flex flex-col items-start justify-center p-1 lg:p-0 gap-5 md:px-0 mt-5 w-full h-full" data-aos="fade-up">
-          <MyProjects />
-        </div>
-
+        <MyProjects />
         {/* Contact Me */}
-        <div className="flex flex-col items-start justify-center p-1 lg:p-0 md:p-0 gap-5 md:px-0  mt-5 h-full" data-aos="fade-up">
-          <ContactMe />
-        </div>
+        <ContactMe />
       </div>
     </main>
   );

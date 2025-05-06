@@ -4,6 +4,7 @@ import Tilt from "react-parallax-tilt";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCursor } from "../context/cursorContext";
 
+
 function MyProjects() {
   const [selectedFilter, setSelectedFilter] = useState("All");
   const [visibleCount, setVisibleCount] = useState(3);
