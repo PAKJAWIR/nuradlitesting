@@ -39,7 +39,7 @@ function HeaderAboutMe() {
 
         {/* Kolom Kanan */}
         <div className="flex-col gap-10 w-full lg:w-fit lg:flex lg:max-w-lg p-4 flex-1">
-          <div className="hidden lg:block md:block">
+          <div className="hidden lg:block md:hidden">
             <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1} transitionSpeed={400}>
               <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="h-fit overflow-hidden rounded-xl transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_theme(colors.warna4)] hover:border-warna4">
                 <img src="/img/NuradliAbout.jpg" alt="Nuradli facing camera" className="w-full h-full object-cover rounded-xl" />

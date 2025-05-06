@@ -7,10 +7,10 @@ function ContactMe() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-20 p-5 mt-20">
       {/* Column Kiri */}
-      <div  className="md:w-1/2 flex flex-col gap-1">
+      <div  className="md:w-full flex flex-col gap-1">
         <Title1 text="contact-me" />
         <p onMouseEnter={textEnter} onMouseLeave={textLeave} className={classPara}>Get in touch with me for any inquiries or collaboration opportunities. I'm here to discuss your project needs, answer your questions, and explore how we can work together to achieve your goals.</p>
-        <div className="md:w-1/2 w-full h-[300px] md:h-[400px] block lg:hidden mt-5">
+        <div className="md:w-full w-full h-[300px] md:h-[400px] block lg:hidden mt-5">
           <iframe
             className="w-full h-full rounded-xl shadow-md"
             loading="lazy"
@@ -35,7 +35,7 @@ function ContactMe() {
       </div>
 
       {/* Column Kanan: Google Maps */}
-      <div className="md:w-1/2 w-full h-[300px] md:h-[400px] hidden lg:block">
+      <div className="md:w-full w-full h-[300px] md:h-[400px] hidden lg:block">
         <iframe
           className="w-full h-full rounded-xl shadow-md"
           loading="lazy"

@@ -9,7 +9,6 @@ import { EffectCards } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
-import { div } from "motion/react-client";
 
 export function Certification() {
   // Class configurations
@@ -20,6 +19,13 @@ export function Certification() {
   const hoverOverlayClass = "absolute inset-0 bg-gradient-to-t from-warna6/90 to-warna4/20 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-end p-4";
   const hoverTextWrapperClass = "text-warna2 space-y-2 translate-y-4 group-hover:translate-y-0 group-focus-within:translate-y-0 transition-transform duration-300 text-left";
   const normalTextWrapperClass = "flex flex-col items-center";
+
+  // Mobile-only class configurations
+  const mobileCardClass = "border border-warna4 bg-warna5 p-1 rounded-md text-center flex flex-col items-center w-full h-full";
+  const mobileImageWrapperClass = "w-full h-full flex justify-center mb-3";
+  const mobileImageClass = "w-full h-full object-contain rounded";
+  const mobileTitleClass = "text-warna1 text-sm font-bold mt-2";
+  const mobileDescriptionClass = "text-warna3 text-center text-xs p-1";
   // Certification data mapping
   const certifications = [
     {
@@ -52,46 +58,80 @@ export function Certification() {
     },
   ];
 
+  const [isMobile, setIsMobile] = useState(false);
   const { textEnter, textLeave } = useCursor();
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 720px)");
+    const handleChange = (e) => {
+      setIsMobile(e.matches);
+    };
+
+    handleChange(mediaQuery);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
   return (
-    <div className="flex flex-col item-center justify-center gap-3">
-      <Title1 text="certifications" />
-      <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
-        {certifications.map((cert) => (
-          <Tilt key={cert.id} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400}>
-            <div className={cardClass}>
-              <a href={cert.href} target="_blank" rel="noopener noreferrer" aria-label={`View ${cert.title} certificate`} className="relative block focus:outline-none">
-                <div className={imageWrapperClass}>
-                  <img src={cert.imgSrc} alt={`Certification-${cert.id}`} className=" w-full h-full object-cover rounded-md transition-transform duration-300 group-hover:scale-105 group-focus-within:scale-105" />
+    <>
+      {isMobile ? (
+        <div className="flex flex-col justify-center max-w-5xl w-full mx-auto gap-3 px-5">
+          <Title1 text="certifications" />
+          <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className="w-full">
+            {certifications.map((cert) => (
+              <SwiperSlide key={cert.id}>
+                <a href={cert.href} target="_blank" rel="noopener noreferrer" aria-label={`View ${cert.title} certificate`} className={mobileCardClass}>
+                  <div className={mobileImageWrapperClass}>
+                    <img src={cert.imgSrc} alt={`Certification-${cert.id}`} className={mobileImageClass} />
+                  </div>
+                  <h3 className={mobileTitleClass}>{cert.title}</h3>
+                  <p className={mobileDescriptionClass}>{cert.description}</p>
+                </a>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      ) : (
+        <div className="flex flex-col item-center justify-center gap-3">
+          <Title1 text="certifications" />
+          <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+            {certifications.map((cert) => (
+              <Tilt key={cert.id} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400}>
+                <div className={cardClass}>
+                  <a href={cert.href} target="_blank" rel="noopener noreferrer" aria-label={`View ${cert.title} certificate`} className="relative block focus:outline-none">
+                    <div className={imageWrapperClass}>
+                      <img src={cert.imgSrc} alt={`Certification-${cert.id}`} className=" w-full h-full object-cover rounded-md transition-transform duration-300 group-hover:scale-105 group-focus-within:scale-105" />
 
-                  {/* Hover effect overlay */}
-                  <div className={hoverOverlayClass}>
-                    <div className={hoverTextWrapperClass}>
-                      <h3 className="text-warna1 text-md font-bold">{cert.title}</h3>
-                      <p className="text-warna3 text-xs">{cert.description}</p>
+                      {/* Hover effect overlay */}
+                      <div className={hoverOverlayClass}>
+                        <div className={hoverTextWrapperClass}>
+                          <h3 className="text-warna1 text-md font-bold">{cert.title}</h3>
+                          <p className="text-warna3 text-xs">{cert.description}</p>
 
-                      {/* Hover link underline */}
-                      <div className="relative group">
-                        <span className="text-sm font-medium flex items-center gap-1">
-                          <Title2 text="view-certificate" />
-                        </span>
+                          {/* Hover link underline */}
+                          <div className="relative group">
+                            <span className="text-sm font-medium flex items-center gap-1">
+                              <Title2 text="view-certificate" />
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  </a>
+
+                  {/* Normal text outside hover */}
+                  <div className={normalTextWrapperClass}>
+                    <h3 className={titleClass}>{cert.title}</h3>
+                    <p className={descriptionClass}>{cert.description}</p>
                   </div>
                 </div>
-              </a>
-
-              {/* Normal text outside hover */}
-              <div className={normalTextWrapperClass}>
-                <h3 className={titleClass}>{cert.title}</h3>
-                <p className={descriptionClass}>{cert.description}</p>
-              </div>
-            </div>
-          </Tilt>
-        ))}
-      </div>
-    </div>
+              </Tilt>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -181,7 +221,7 @@ export function Certification2() {
           </Swiper>
         </div>
       ) : (
-        <div className="flex flex-col item-center justify-center gap-3 max-w-6xl">
+        <div className="flex flex-col item-center justify-center gap-3 max-w-6xl px-10">
           <Title1 text="certifications" />
           <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
             {certificationsMap.map((certM) => (

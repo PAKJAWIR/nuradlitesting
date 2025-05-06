@@ -1,5 +1,5 @@
 import { Button2 } from "../button";
-import { Certification} from "../certification"
+import { Certification } from "../certification";
 import ContactMe from "../contactme";
 import MyProjects from "../myprojects";
 import TechStack from "../techstack";
@@ -11,7 +11,7 @@ import { MyServices } from "../myservices";
 
 function Main() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1000, once: false });
   }, []);
 
   return (
@@ -25,25 +25,31 @@ function Main() {
         </div>
 
         {/* Column Kanan */}
-        <div className="flex flex-col gap-15 mt-10 w-full lg:w-fit lg:max-w-lg p-5" data-aos="fade-up">
-          <TechStack />
-          <MyServices />
+        <div className="flex flex-col gap-15 mt-10 w-full lg:w-fit lg:max-w-lg p-5">
+          <div data-aos="fade-up">
+            <TechStack />
+          </div>
+          <div data-aos="fade-up">
+            <MyServices />
+          </div>
         </div>
       </div>
 
-      {/* Certifications */}
-      <div className="border-warna4 flex flex-col items-center justify-center p-5 sm:p-10 gap-5 w-full" data-aos="fade-up">
-        <Certification />
-      </div>
+      <div className="flex flex-col items-center justify-center p-10 lg:p-5 gap-5 w-full">
+        {/* Certifications */}
+        <div className="border-warna4 flex flex-col items-center justify-center md:px-1 p-10 lg:p-5 gap-5 w-full overflow-hidden" data-aos="fade-up">
+          <Certification />
+        </div>
 
-      {/* My Projects */}
-      <div className="flex flex-col items-start justify-center p-1 lg:p-5 gap-5 mt-5 h-full" data-aos="fade-up">
-        <MyProjects />
-      </div>
+        {/* My Projects */}
+        <div className="flex flex-col items-start justify-center p-1 lg:p-0 gap-5 md:px-0 mt-5 h-full" data-aos="fade-up">
+          <MyProjects />
+        </div>
 
-      {/* Contact Me */}
-      <div className="flex flex-col items-start justify-center p-1 lg:p-5 gap-5 mt-5 h-full" data-aos="fade-up">
-        <ContactMe />
+        {/* Contact Me */}
+        <div className="flex flex-col items-start justify-center p-1 lg:p-0 md:p-0 gap-5 md:px-0  mt-5 h-full" data-aos="fade-up">
+          <ContactMe />
+        </div>
       </div>
     </main>
   );

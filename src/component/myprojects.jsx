@@ -57,7 +57,7 @@ function MyProjects() {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full min-h-[300px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-3 gap-5 w-full min-h-[300px]">
         <AnimatePresence>
           {visibleProjects.length > 0 ? (
             visibleProjects.map((proj) => (

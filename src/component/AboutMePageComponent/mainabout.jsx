@@ -11,10 +11,10 @@ function MainAboutMe() {
   return (
     <>
       {/* Myservices */}
-      <div className="flex flex-col items-center justify-center gap-15 h-full pt-10" data-aos="fade-up">
+      <div className="flex  md:px-1 flex-col items-center justify-center gap-15 h-full pt-10" data-aos="fade-up">
         <MyServices2 />
       </div>
-      <div className="flex flex-col items-center justify-center gap-15 h-full lg:p-10 p-6 overflow-hidden" data-aos="fade-up">
+      <div className="flex md:px-1 flex-col items-center justify-center gap-15 h-full lg:p-10 p-6 overflow-hidden" data-aos="fade-up">
         <Certification2 />
       </div>
     </>
