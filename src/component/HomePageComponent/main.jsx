@@ -42,7 +42,7 @@ function Main() {
         </div>
 
         {/* My Projects */}
-        <div className="flex flex-col items-start justify-center p-1 lg:p-0 gap-5 md:px-0 mt-5 h-full" data-aos="fade-up">
+        <div className="flex flex-col items-start justify-center p-1 lg:p-0 gap-5 md:px-0 mt-5 w-full h-full" data-aos="fade-up">
           <MyProjects />
         </div>
 
