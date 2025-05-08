@@ -5,7 +5,7 @@ import ContactMe from "../contactme";
 function HeaderContact() {
 
   return (
-    <section className="relative w-full pt-20 bg-warna6">
+    <section className="relative w-full bg-warna6">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-warna6 to-warna5 z-0" />
 
