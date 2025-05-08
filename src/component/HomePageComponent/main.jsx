@@ -8,7 +8,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { AboutMe } from "../aboutme";
 import { MyServices } from "../myservices";
-import { lazy } from "react";
 
 function Main() {
   useEffect(() => {

@@ -84,7 +84,7 @@ function Header() {
                     onMouseLeave={textLeave}
                     className="h-fit overflow-hidden rounded-xl hidden md:block transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_theme(colors.warna4)] hover:border-warna4"
                   >
-                    <img src="/img/Nuradli.jpg" alt="Nuradli facing camera" className="w-full h-full md:w-full md:h-full object-cover rounded-xl" />
+                    <img loading="lazy" src="/img/Nuradli.jpg" alt="Nuradli facing camera" className="w-full h-full md:w-full md:h-full object-cover rounded-xl" />
                   </div>
                 </Tilt>
               </div>

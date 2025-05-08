@@ -4,7 +4,6 @@ import Tilt from "react-parallax-tilt";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCursor } from "../context/cursorContext";
 
-
 function MyProjects() {
   const [selectedFilter, setSelectedFilter] = useState("All");
   const [visibleCount, setVisibleCount] = useState(3);
@@ -42,7 +41,9 @@ function MyProjects() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div className="flex flex-col">
           <Title1 text="my-projects" />
-          <p  onMouseEnter={textEnter} onMouseLeave={textLeave} className="text-warna3 text-sm mt-1">check out my latest projects!</p>
+          <p onMouseEnter={textEnter} onMouseLeave={textLeave} className="text-warna3 text-sm mt-1">
+            check out my latest projects!
+          </p>
         </div>
         <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="flex flex-wrap items-start justify-start text-center lg:justify-center gap-2">
           {["All", "Web", "Shirt", "Poster"].map((filter) => (
@@ -71,7 +72,7 @@ function MyProjects() {
                   >
                     <div className="relative block focus:outline-none group" tabIndex={0}>
                       <div className="relative overflow-hidden rounded-md group w-full aspect-[4/5]">
-                        <img src={proj.imgSrc} alt={proj.title} className="w-full h-full object-cover rounded-md transition-transform duration-300 group-hover:scale-105 group-focus-within:scale-105" />
+                        <img loading="lazy" src={proj.imgSrc} alt={proj.title} className="w-full h-full object-cover rounded-md transition-transform duration-300 group-hover:scale-105 group-focus-within:scale-105" />
                         <div className="absolute inset-0 bg-gradient-to-t from-warna6/90 to-warna4/20 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
                           <div className="text-warna2 space-y-2 translate-y-4 group-hover:translate-y-0 group-focus-within:translate-y-0 transition-transform duration-300 text-center justify-center items-center">
                             <h3 className="text-warna1 text-md font-bold">{proj.title}</h3>
@@ -85,8 +86,16 @@ function MyProjects() {
               </motion.div>
             ))
           ) : (
-            <motion.div  onMouseEnter={textLeave} onMouseLeave={textLeave} key="no-projects" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="col-span-full flex items-center justify-center text-warna3 text-sm">
-              No projects found.
+            <motion.div
+              onMouseEnter={textLeave}
+              onMouseLeave={textLeave}
+              key="no-projects"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="col-span-full flex items-center justify-center text-warna3 text-sm"
+            >
+              No projects here yet… Maybe you could be the first?
             </motion.div>
           )}
         </AnimatePresence>
@@ -95,12 +104,7 @@ function MyProjects() {
       {/* Load More Button */}
       {filteredProjects.length > 3 && (
         <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="flex justify-center mt-1">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleLoadMore}
-            className=" px-6 py-2 text-sm rounded-md border border-warna4 text-warna3 hover:bg-warna4 hover:text-warna1 transition-all"
-          >
+          <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleLoadMore} className=" px-6 py-2 text-sm rounded-md border border-warna4 text-warna3 hover:bg-warna4 hover:text-warna1 transition-all">
             {isAllVisible ? "Show Less" : "Load More"}
           </motion.button>
         </div>

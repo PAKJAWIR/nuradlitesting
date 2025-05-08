@@ -1,9 +1,10 @@
-import UnderConstruction from "./UnderConstruction";
-
+import HeaderProject from "../component/ProjectsPageComponent/headerproject";
+import Footer from "../component/footer.jsx";
 function Projects() {
   return (
     <>
-      <UnderConstruction />
+      <HeaderProject />
+      <Footer/>
     </>
   );
 }
