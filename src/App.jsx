@@ -5,10 +5,10 @@ import Navbar from "./component/navbar.jsx";
 import RunningText from "./component/runningtext.jsx";
 import AppRouting from "./config/AppRoutes.jsx";
 import "./App.css";
-
 import BackToTop from "./component/backtotop.jsx";
 import CustomCursor from "./component/customcursor.jsx";
 import ScrollToTop from "./component/scrolltotop.jsx";
+import Preloader from "./component/preloader.jsx";
 
 function App() {
   return (

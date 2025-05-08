@@ -12,7 +12,7 @@ export function Button1() {
   const { textEnter, textLeave } = useCursor();
   const buttonClass =
     "flex items-center gap-2 bg-warna1 hover:bg-warna2 text-warna5 rounded-md transition-all duration-300 transform hover:scale-105 " +
-    "cursor-none text-sm px-5 py-2 sm:text-base sm:px-4 sm:py-1.5 md:text-lg md:px-10 md:py-2 lg:text-xl lg:px-9 lg:py-2.5";
+    " text-sm px-5 py-2 sm:text-base sm:px-4 sm:py-1.5 md:text-lg md:px-10 md:py-2 lg:text-xl lg:px-9 lg:py-2.5";
 
   return (
     <div onMouseEnter={textEnter} onMouseLeave={textLeave} className="flex gap-2 sm:gap-3 md:gap-4 mt-2">
@@ -34,7 +34,7 @@ export function Button1() {
 export function Button2({ text, to, href, onClick, className = "" }) {
   const { textEnter, textLeave } = useCursor();
   const baseClass =
-    "whitespace-nowrap w-fit text-xs sm:text-sm md:text-base lg:text-lg px-5 py-2 md:px-6 lg:px-9  lg:py-2 mt-2 text-warna1 rounded-md border border-solid border-warna4  transition-all duration-300 transform hover:bg-warna4 hover:text-warna1 hover:scale-105 cursor-none " +
+    "whitespace-nowrap w-fit text-xs sm:text-sm md:text-base lg:text-lg px-5 py-2 md:px-6 lg:px-9  lg:py-2 mt-2 text-warna1 rounded-md border border-solid border-warna4  transition-all duration-300 transform hover:bg-warna4 hover:text-warna1 hover:scale-105  " +
     className;
 
   if (to) {
@@ -86,7 +86,7 @@ export function BackToTopButton() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.2, ease: "easeOut",}}
-          className="fixed z-100 bottom-4 right-4 p-3 rounded-full border border-solid border-warna4 text-warna4 shadow-md hover:bg-warna4 hover:text-warna1 hover:scale-105 transition-all ease-in-out duration-300 cursor-none"
+          className="fixed z-10 bottom-4 right-4 p-3 rounded-full border border-solid border-warna4 text-warna4 shadow-md hover:bg-warna4 hover:text-warna1 hover:scale-105 transition-all ease-in-out duration-300 "
         >
           <FaArrowUp className="text-base md:text-lg" />
         </motion.a>

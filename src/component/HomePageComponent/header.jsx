@@ -61,7 +61,7 @@ function Header() {
                 onMouseLeave={textLeave}
                 className="text-warna3 border border-solid border-warna4 p-5 text-center rounded-md text-2xl md:text-xl hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_theme(colors.warna4)] hover:border-warna4"
               >
-                <HoverDecryptText className="cursor-none" text="Need-money-for-Porsche" characters="0123456789$€¥£¢%&*" />
+                <HoverDecryptText text="Need-money-for-Porsche" characters="0123456789$€¥£¢%&*" />
               </h3>
 
               <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1} transitionSpeed={400}>

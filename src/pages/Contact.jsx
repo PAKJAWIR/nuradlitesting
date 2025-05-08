@@ -1,10 +1,11 @@
-import UnderConstruction from "./UnderConstruction";
-
+import HeaderContact from "../component/ContactMePageComponent/headercontact";
+import Footer from "../component/footer.jsx";
 
 function Contact() {
   return (
     <>
-      <UnderConstruction/>
+      <HeaderContact />
+      <Footer />
     </>
   );
 }

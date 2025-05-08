@@ -37,7 +37,7 @@ function MyProjects() {
   const isAllVisible = visibleCount >= filteredProjects.length;
 
   return (
-    <div className="flex flex-col gap-5 px-4 lg:px-5 w-full">
+    <div className="flex flex-col gap-5 px-4 lg:px-5 w-full ">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div className="flex flex-col">
@@ -48,7 +48,7 @@ function MyProjects() {
           {["All", "Web", "Shirt", "Poster"].map((filter) => (
             <button
               key={filter}
-              className={`cursor-none px-4 py-1 text-sm rounded-full border border-warna4 text-warna3 hover:bg-warna4 hover:text-warna1 transition-all ${selectedFilter === filter ? "bg-warna4 text-warna1" : ""}`}
+              className={` px-4 py-1 text-sm rounded-full border border-warna4 text-warna3 hover:bg-warna4 hover:text-warna1 transition-all ${selectedFilter === filter ? "bg-warna4 text-warna1" : ""}`}
               onClick={() => setSelectedFilter(filter)}
             >
               {filter}
@@ -99,7 +99,7 @@ function MyProjects() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleLoadMore}
-            className="cursor-none px-6 py-2 text-sm rounded-md border border-warna4 text-warna3 hover:bg-warna4 hover:text-warna1 transition-all"
+            className=" px-6 py-2 text-sm rounded-md border border-warna4 text-warna3 hover:bg-warna4 hover:text-warna1 transition-all"
           >
             {isAllVisible ? "Show Less" : "Load More"}
           </motion.button>

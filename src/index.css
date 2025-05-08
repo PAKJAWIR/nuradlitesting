@@ -8,10 +8,11 @@
   scroll-behavior: smooth;
   background-color: #0c181f;
   font-synthesis: none;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none;
 }
 
 body {

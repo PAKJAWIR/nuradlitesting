@@ -15,7 +15,7 @@ export function Certification() {
   const cardClass = "border border-solid border-warna4 w-full h-full flex flex-col items-center p-1 lg:p-5 rounded-md text-center bg-warna5 transition-all duration-300 hover:shadow-[0_0_20px_theme(colors.warna4)] hover:border-warna4";
   const titleClass = "text-warna1 whitespace-nowrap text-md font-bold mt-2";
   const descriptionClass = "text-warna3 text-center leading-relaxed tracking-wide text-xs p-1";
-  const imageWrapperClass = "relative overflow-hidden rounded-md group cursor-none";
+  const imageWrapperClass = "relative overflow-hidden rounded-md group";
   const hoverOverlayClass = "absolute inset-0 bg-gradient-to-t from-warna6/90 to-warna4/20 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-end p-4";
   const hoverTextWrapperClass = "text-warna2 space-y-2 translate-y-4 group-hover:translate-y-0 group-focus-within:translate-y-0 transition-transform duration-300 text-left";
   const normalTextWrapperClass = "flex flex-col items-center";
@@ -141,7 +141,7 @@ export function Certification2() {
   const cardClass = "border border-solid border-warna4 w-full h-full flex flex-col items-center p-5 rounded-md text-center bg-warna5 transition-all duration-300 hover:shadow-[0_0_20px_theme(colors.warna4)] hover:border-warna4";
   const titleClass = "text-warna1 whitespace-nowrap text-md font-bold mt-2";
   const descriptionClass = "text-warna3 text-center leading-relaxed tracking-wide text-xs p-1";
-  const imageWrapperClass = "relative cursor-none overflow-hidden rounded-md group";
+  const imageWrapperClass = "relative overflow-hidden rounded-md group";
   const hoverOverlayClass = "absolute inset-0 bg-gradient-to-t from-warna6/90 to-warna4/20 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-end p-4";
   const hoverTextWrapperClass = "text-warna2 space-y-2 translate-y-4 group-hover:translate-y-0 group-focus-within:translate-y-0 transition-transform duration-300 text-left";
   const normalTextWrapperClass = "flex flex-col items-center";

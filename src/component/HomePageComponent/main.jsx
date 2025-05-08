@@ -18,7 +18,7 @@ function Main() {
   return (
     <main id="aboutme" className="w-full bg-warna6">
       {/* AboutMe Column */}
-      <div className="flex flex-col lg:flex-row items-start justify-center p-5 sm:p-10 gap-5 lg:gap-25 w-full">
+      <div className="flex flex-col lg:flex-row  items-start justify-center p-5 sm:p-10 gap-5 lg:gap-25 w-full">
         {/* Column Kiri */}
         <div className="flex flex-col mt-10 gap-5 w-full lg:w-fit lg:max-w-lg p-5" data-aos="fade-up">
           <AboutMe />

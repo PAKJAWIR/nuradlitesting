@@ -47,7 +47,7 @@ export function AboutMeFull() {
           download
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
-          className="whitespace-nowrap uppercase w-fit text-sm px-5 py-2 md:px-6 lg:px-9 lg:py-2 mt-2 text-warna1 rounded-md border border-solid border-warna4 transition-all duration-300 transform hover:bg-warna4 hover:text-warna1 hover:scale-105 cursor-none"
+          className="whitespace-nowrap uppercase w-fit text-sm px-5 py-2 md:px-6 lg:px-9 lg:py-2 mt-2 text-warna1 rounded-md border border-solid border-warna4 transition-all duration-300 transform hover:bg-warna4 hover:text-warna1 hover:scale-105"
         >
           Download My CV
         </a>
