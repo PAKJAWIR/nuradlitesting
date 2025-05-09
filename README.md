@@ -1,34 +1,38 @@
-✨ Portfolio Website - Built with React + Tailwind CSS + Vite ⚡
+✨ Website Portofolio – Dibuat dengan React, Tailwind CSS & Vite ⚡
 <div align="center"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" /> </div>
-🖥️ Overview
-This is a personal portfolio website built with React.js and Tailwind CSS, powered by Vite for lightning-fast development.
-It showcases my projects, skills, services, and provides a way to contact me.
+🖥️ Tentang Proyek Ini
+Halo! Ini adalah website portofolio pribadi yang aku buat pakai React.js dan Tailwind CSS, dibantu Vite biar proses pengembangannya cepat dan ringan.
 
-🚀 Lightweight, modern, and fully responsive across all devices.
+Website ini aku rancang untuk menampilkan proyek-proyekku, skill yang aku kuasai, layanan yang aku tawarkan, dan tentu saja—cara buat kontak langsung denganku.
 
+🚀 Ringan, modern, dan tampil keren di semua ukuran layar—dari HP sampai desktop!
 
-🛠️ Built With
-⚛️ React — Frontend Library
+🛠️ Teknologi yang Dipakai
+⚛️ React – library JavaScript buat bangun tampilan interaktif
 
-🎨 Tailwind CSS — Utility-first CSS Framework
+🎨 Tailwind CSS – framework CSS yang praktis dan fleksibel
 
-⚡ Vite — Build Tool and Development Server
+⚡ Vite – alat bantu pengembangan super cepat
 
-📂 Features
-Responsive design for mobile, tablet, and desktop
+📂 Fitur-Fitur
+Desain responsif untuk semua perangkat
 
-Smooth scroll and animations
+Scroll halus dan animasi yang enak dilihat
 
-Filterable project portfolio section
+Proyek bisa difilter berdasarkan kategori
 
-Contact form integration
+Formulir kontak yang langsung bisa dipakai
 
-SEO friendly
+SEO-friendly biar mudah ditemukan di Google
 
-Fast loading speed thanks to Vite
+Loading cepat banget, cocok buat pengalaman pengguna yang maksimal
 
-🚀 Getting Started
-Prerequisites
-Node.js installed
+🚀 Cara Mulai Pakai
+Yang Dibutuhkan
+Sebelum mulai, pastikan kamu sudah punya:
 
-npm or yarn
+Node.js
+
+npm atau yarn
+
+Setelah itu tinggal clone repo ini dan mulai ngoding deh!
