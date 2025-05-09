@@ -43,7 +43,7 @@ export function AboutMeFull() {
 
         <p className={classPara}>I see this creative journey as more than just work — it’s how I grow, reflect, and connect. Let’s build something thoughtful.</p>
         <a
-          href="/files/Nuradli-CV.pdf"
+          href="/assets/CV-NURADLI-ENGLISH.pdf"
           download
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
