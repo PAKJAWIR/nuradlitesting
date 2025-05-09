@@ -93,7 +93,7 @@ function MyProjects() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="col-span-full flex items-center justify-center text-warna3 text-sm"
+              className="col-span-full flex items-center justify-center text-warna3 text-sm text-center"
             >
               No projects here yet… Maybe you could be the first?
             </motion.div>
