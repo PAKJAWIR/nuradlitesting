@@ -5,7 +5,7 @@ Di repository ini, aku menggunakan React, Tailwind CSS, dan Vite untuk membangun
 
 Silakan clone atau download source code-nya jika kamu ingin mempelajarinya atau mengembangkannya lebih lanjut.
 
-Terima kasih juga untuk Pak Sandhika Galih yang sudah meluangkan waktu untuk mereview project ini. Aku harap project ini bisa menjadi langkah kecil untuk naik level—dari yang awalnya Unemployed, menjadi Employed wkwk.
+Aku harap project ini bisa menjadi langkah kecil untuk naik level—dari yang awalnya Unemployed, menjadi Employed wkwk.
 
 Kalau kamu ingin melihat versi live dari project ini, bisa langsung kunjungi:
 
