@@ -63,7 +63,7 @@ function MyProjects() {
         <AnimatePresence>
           {visibleProjects.length > 0 ? (
             visibleProjects.map((proj) => (
-              <motion.div key={proj.id} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -40 }} transition={{ duration: 0.5 }}>
+              <motion.div key={proj.id} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}>
                 <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400} glareEnable={true} glareMaxOpacity={0.1} glarePosition="all" className="transition-transform duration-300 hover:z-10">
                   <div
                     onMouseEnter={textEnter}
