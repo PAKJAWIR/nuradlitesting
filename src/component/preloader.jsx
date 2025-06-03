@@ -49,7 +49,7 @@ function Preloader({ onComplete }) {
         textLayer.current,
         {
           color: "#f5f5f5",
-          duration: 3,
+          duration: 2,
         },
         "<"
       );
