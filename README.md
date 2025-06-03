@@ -12,3 +12,5 @@ Kalau kamu ingin melihat versi live dari project ini, bisa langsung kunjungi:
 https://nuradli.netlify.app
 
 Terima kasih sudah mampir, semoga bermanfaat, dan Happy Coding!
+
+*Note : kode nya masih belum kukasih komentar, masih dalam tahap pengembangan, trims.
